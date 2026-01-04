@@ -1,6 +1,6 @@
-# Stock Price Prediction
+# Nasdaq financial database
 
-This project is **UNDER DEVELOPMENT**. The final goal is to be able to predict stock price of a company based on OLHC chart and financial statements data.
+UPDATE: Since yfinance updated their API, downloading OLHC data and calculating indicator data no longer works. Only the financial data (quarterly statements and ratios) can be saved to the database.
 
 **Platform:** WSL Ubuntu
 
@@ -36,13 +36,15 @@ sudo service postgresql start
 Now, when postgreSQL is installed, clone this repository:
 
 ```text
-git clone https://github.com/bingoobongoo/stock_price_prediction_app.git
-cd ./stock_price_prediction_app
+git clone https://github.com/bingoobongoo/nasdaq_financial_db.git
+cd ./nasdaq_financial_db
 ```
 
 Install all required packages:
 
 ```text
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -68,5 +70,3 @@ After this you can minimize the terminal window and wait until database is creat
 Database schema is saved as a ***nasdaq_companies_backup.tar*** file. For more details about database (i.e entities, attributes and relationships) check the [***DATABASE.md***](DATABASE.md) file.
 
 > Note that the ***nasdaq_companies_backup.tar*** file is just a schema for database. The actual data is downloaded using ***main.py*** script.
-
-*Further information will be added.*

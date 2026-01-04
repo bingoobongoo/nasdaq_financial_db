@@ -144,5 +144,3 @@ List of columns for each table:
 * ***shareholder_return*** *real*
 
 **FOREIGN KEY** ***financial_statement_id*** **REFERENCES** ***financial_statement(financial_statement_id)***
-
-*More attributes and relationships will be added.*
